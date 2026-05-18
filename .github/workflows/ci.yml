@@ -49,7 +49,6 @@ jobs:
         run: rebar3 test
         env:
           SAFE_LICENSE: ${{ secrets.SAFE_LICENSE }}
-          ERL_FLAGS: "-args_file config/vm.args"
       - name: Run elvis on elvis
         run: |
           rebar3 escriptize
