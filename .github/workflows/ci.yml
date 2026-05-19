@@ -55,6 +55,3 @@ jobs:
           _build/default/bin/elvis_core
         env:
           ERL_FLAGS: "-args_file config/vm.args"
-      - name: Debug via tmate
-        if: failure()
-        uses: mxschmitt/action-tmate@v3
