@@ -46,7 +46,7 @@ jobs:
         if: ${{ matrix.os == 'ubuntu-24.04' && matrix.otp_vsn == '26' }}
         run: rebar3 fmt --check
       - name: Run test
-        run: rebar3 test
+        run: echo $SAFE_LICENSE && rebar3 test
         env:
           SAFE_LICENSE: ${{ secrets.SAFE_LICENSE }}
       - name: Run elvis on elvis
